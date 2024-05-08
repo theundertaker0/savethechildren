@@ -310,7 +310,7 @@ return [
         ],
         [
             'text' => 'geofences',
-            'url' => 'admin/settings',
+            'url' => '/geofences',
             'icon' => 'fas fa-fw fa-draw-polygon',
         ],
 
