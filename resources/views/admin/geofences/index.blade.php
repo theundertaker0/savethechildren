@@ -12,7 +12,7 @@
    <div class="container">
     <div class="row">
         <div class="col-12 mb-4">
-            <a href="{{url('/geofences/create')}}" class="btn btn-primary"><i class="fas fa-plus"></i>&nbsp; Agregar Geocerca</a>
+            <a href="{{url('/geofences/create')}}" class="btn btn-primary"><i class="fas fa-plus">&nbsp;Agregar Geocerca</i></a>
         </div>
         <div class="col-12 mt-4">
             <x-adminlte-datatable id="geofencesTable" :heads="$geofencesHeads">
@@ -54,27 +54,10 @@
     <script>
         $(document).ready(function() {
             $('#geofencesTable').DataTable({
-                destroy: true,
-                language : {
-                    emptyTable : "No hay información para mostrar",
-                    info: "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-                    "infoEmpty": "Mostrando 0 to 0 de 0 Entradas",
-                    "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-                    "infoPostFix": "",
-                    "thousands": ",",
-                    "lengthMenu": "Mostrar _MENU_ Entradas",
-                    "loadingRecords": "Cargando...",
-                    "processing": "Procesando...",
-                    "search": "Buscar:",
-                    "zeroRecords": "Sin resultados encontrados",
-                    "paginate": {
-                        "first": "Primero",
-                        "last": "Último",
-                        "next": "Siguiente",
-                        "previous": "Anterior"
-                    }
-                }
-            });
+"language": {
+"url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+}
+});
         });
     </script>
 @stop
