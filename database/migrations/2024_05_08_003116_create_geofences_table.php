@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name',300);
             $table->text('description')->nullable();
+            $table->json('polygon');
             $table->timestamps();
             $table->softDeletes();
         });

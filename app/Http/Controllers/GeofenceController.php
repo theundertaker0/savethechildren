@@ -27,7 +27,7 @@ class GeofenceController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.geofences.create',['mode' => 'create']);
     }
 
     /**
@@ -35,7 +35,16 @@ class GeofenceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'polygon' => 'required'
+        ], [
+            'name.required' => 'El campo nombre es obligatorio.',
+            'polygon.required' => 'Debe dibujar una geocerca.',
+        ]);
+
+        Geofence::create($request->all());
+        return redirect()->route('geofences.index');
     }
 
     /**
@@ -43,7 +52,9 @@ class GeofenceController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $geofence = Geofence::find($id);
+
+        return view('admin.geofences.show',compact('geofence'));
     }
 
     /**
@@ -51,7 +62,8 @@ class GeofenceController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $geofence = Geofence::find($id);
+        return view('admin.geofences.create', ['mode' => 'edit', 'geofence' => $geofence]);
     }
 
     /**
@@ -67,6 +79,8 @@ class GeofenceController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $geofence = Geofence::find($id);
+        $geofence->delete();
+        return redirect()->route('geofences.index');
     }
 }
