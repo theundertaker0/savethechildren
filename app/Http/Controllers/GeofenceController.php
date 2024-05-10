@@ -27,7 +27,7 @@ class GeofenceController extends Controller
      */
     public function create()
     {
-        return view('admin.geofences.create',['mode' => 'create']);
+        return view('admin.geofences.create',['mode' => 'create','geofence' => null]);
     }
 
     /**

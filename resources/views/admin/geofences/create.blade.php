@@ -3,15 +3,16 @@
 @section('title', 'Geocercas-Crear')
 
 @section('content_header')
-    <h1>Agregar Geocerca</h1>
+    <h1>{{ $mode == 'create' ? 'Agregar Geocerca' : 'Editar Geocerca'}}</h1>
 @stop
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
+                    <p>{{$mode}}</p>
                     <form method="POST" action="{{ $mode == 'create' ? route('geofences.store') : route('geofences.update', $geofence->id) }}">
                         @csrf
                         @if($mode == 'edit')
@@ -63,13 +64,9 @@ crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js">
     </script>
     <script>
-        console.log("Valor de $mode:", {!! json_encode($mode) !!});
-        @if($mode == 'edit')
-            var isEditMode = true;
-        @else
-            var isEditMode = false;
-        @endif
-        console.log('hey',isEditMode);
+        console.log("Valor de $mode:", @JSON($mode));
+
+        console.log('hey',@JSON($mode));
         ///Setting the center of the map
         var center = [20.9673702,  -89.5925857];
         // Create the map
@@ -116,9 +113,9 @@ crossorigin=""></script>
             }
         });
         map.addControl(drawControl);
-        if(isEditMode){
+        @if($mode == 'edit')
             //Converting the data
-            var polygon = @JSON($geofence->polygon);
+             var polygon = @JSON($geofence->polygon);
             console.log(polygon);
 
             //Parsing the data and adding the layer to map
@@ -126,7 +123,7 @@ crossorigin=""></script>
             // Adjust map to show the Layer
             var bounds = layer.getBounds();
             map.fitBounds(bounds);
-        }
+         @endif
         map.on('draw:created', function(e) {
             var type = e.layerType,
                 layer = e.layer;
