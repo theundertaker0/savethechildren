@@ -35,7 +35,7 @@
                         <div class="form-group">
                             <label for="map">Dibujar Geocerca</label>
                             <div id="map" style="height: 400px;"></div>
-                            <input type="text" id="polygon" name="polygon" class="form-control">
+                            <input type="text" id="polygon" name="polygon" class="form-control" value="{{ $mode == 'edit' ? $geofence->polygon : '' }}">
                             @error('polygon')
                                 <span class="invalid-feedback d-block">{{ $message }}</span>
 

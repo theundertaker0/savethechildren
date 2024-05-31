@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Geofence;
 use Illuminate\Http\Request;
+use App\Models\Device;
 
-class GeofenceController extends Controller
+class DeviceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $geofencesHeads = [
+        $devicesHeads = [
             'Nombre',
             'Descripción',
             ['label' => 'Acciones', 'no-export' => true, 'width' => 5],
         ];
 
-        $geofences = Geofence::all();
-        return view('admin.geofences.index',compact('geofencesHeads','geofences'));
+        $devices = Device::all();
+        return view('admin.devices.index',compact('devicesHeads','devices'));
     }
 
     /**
@@ -27,7 +27,7 @@ class GeofenceController extends Controller
      */
     public function create()
     {
-        return view('admin.geofences.create',['mode' => 'create','geofence' => null]);
+        return view('admin.devices.create',['mode' => 'create','device' => null]);
     }
 
     /**
@@ -37,14 +37,12 @@ class GeofenceController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'polygon' => 'required'
         ], [
             'name.required' => 'El campo nombre es obligatorio.',
-            'polygon.required' => 'Debe dibujar una geocerca.',
         ]);
 
-        Geofence::create($request->all());
-        return redirect()->route('geofences.index');
+        Device::create($request->all());
+        return redirect()->route('devices.index');
     }
 
     /**
@@ -52,9 +50,9 @@ class GeofenceController extends Controller
      */
     public function show(string $id)
     {
-        $geofence = Geofence::find($id);
+        $device = Device::find($id);
 
-        return view('admin.geofences.show',compact('geofence'));
+        return view('admin.devices.show',compact('device'));
     }
 
     /**
@@ -62,8 +60,8 @@ class GeofenceController extends Controller
      */
     public function edit(string $id)
     {
-        $geofence = Geofence::find($id);
-        return view('admin.geofences.create', ['mode' => 'edit', 'geofence' => $geofence]);
+        $device = Device::find($id);
+        return view('admin.devices.create', ['mode' => 'edit', 'device' => $device]);
     }
 
     /**
@@ -73,14 +71,14 @@ class GeofenceController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'polygon' => 'required'
         ], [
             'name.required' => 'El campo nombre es obligatorio.',
-            'polygon.required' => 'Debe dibujar una geocerca.',
         ]);
-        $geo = Geofence::find($id);
-        $geo->update($request->all());
-        return redirect()->route('geofences.index');
+
+        $device = Device::find($id);
+
+        $device->update($request->all());
+        return redirect()->route('devices.index');
     }
 
     /**
@@ -88,8 +86,8 @@ class GeofenceController extends Controller
      */
     public function destroy(string $id)
     {
-        $geofence = Geofence::find($id);
-        $geofence->delete();
-        return redirect()->route('geofences.index');
+        $device = device::find($id);
+        $device->delete();
+        return redirect()->route('devices.index');
     }
 }

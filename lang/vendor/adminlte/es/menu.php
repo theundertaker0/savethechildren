@@ -9,6 +9,7 @@ return [
     'profile' => 'Perfil',
     'tracking' => 'Seguimiento',
     'geofences' => 'Geocercas',
+    'devices' => 'Dispositivos',
     'change_password' => 'Cambiar Contraseña',
     'multilevel' => 'Multi Nivel',
     'level_one' => 'Nivel 1',

@@ -305,9 +305,15 @@ return [
         ['header' => 'main_navigation'],
         [
             'text' => 'tracking',
-            'url' => 'admin/settings',
+            'url' => '/track',
             'icon' => 'fas fa-fw fa-map-marker-alt',
         ],
+        [
+            'text' => 'devices',
+            'url' => '/devices',
+            'icon' => 'fas fa-fw fa-ring',
+        ],
+
         [
             'text' => 'geofences',
             'url' => '/geofences',
@@ -402,7 +408,7 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
+                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@11.11.0',
                 ],
             ],
         ],
