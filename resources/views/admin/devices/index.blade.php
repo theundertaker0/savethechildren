@@ -2,6 +2,8 @@
 
 @section('plugins.Datatables', true)
 
+@section('plugins.Sweetalert2', true)
+
 @section('title', 'Dispositivos')
 
 @section('content_header')
@@ -18,6 +20,7 @@
             <x-adminlte-datatable id="devicesTable" :heads="$devicesHeads">
                 @foreach ($devices as $device)
                     <tr>
+                        <td>{{$device->id}}</td>
                         <td>{{$device->name}}</td>
                         <td>{{$device->description}}</td>
                         <td>
@@ -25,10 +28,10 @@
                                 <a href="{{ url('/devices/'.$device->id.'/edit') }}" class="btn btn-sm btn-primary mr-1" data-toggle="tooltip" title="Editar">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <form action="{{ url('/devices/'.$device->id) }}" method="post" class="">
+                                <form id="deleteForm-{{$device->id}}" action="{{ url('/devices/'.$device->id) }}" method="post" class="">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-danger" data-toggle="tooltip" title="Eliminar">
+                                    <button type="button" class="btn btn-sm btn-danger" data-toggle="tooltip" title="Eliminar" onclick="confirmDelete({{$device}})">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </form>
@@ -50,6 +53,14 @@
 @section('js')
     <script>
         $(document).ready(function() {
+            @if(session('success'))
+                Swal.fire({
+                    title: 'Mensaje',
+                    text: '{{ session('success') }}',
+                    icon: 'success'
+                });
+            @endif
+
             $('#devicesTable').DataTable({
                 destroy : true,
             "language": {
@@ -57,5 +68,25 @@
             }
             });
         });
+
+        function confirmDelete(device) {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                html: 'Está por eliminar el dispositivo: <b>'+device.name+'</b> , Esta acción no se puede deshacer.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Sí, eliminarlo',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Envía el formulario para eliminar el dispositivo
+                    document.getElementById('deleteForm-'+device.id).submit();
+                }
+            });
+
+
+        }
     </script>
 @stop

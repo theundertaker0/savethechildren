@@ -2,6 +2,8 @@
 
 @section('plugins.Datatables', true)
 
+@section('plugins.Sweetalert2', true)
+
 @section('title', 'Geocercas')
 
 @section('content_header')
@@ -28,10 +30,10 @@
                                 <a href="{{ url('/geofences/'.$geofence->id.'/edit') }}" class="btn btn-sm btn-primary mr-1" data-toggle="tooltip" title="Editar">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <form action="{{ url('/geofences/'.$geofence->id) }}" method="post" class="">
+                                <form id="deleteForm-{{$geofence->id}}" action="{{ url('/geofences/'.$geofence->id) }}" method="post" class="">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-danger" data-toggle="tooltip" title="Eliminar">
+                                    <button type="button" class="btn btn-sm btn-danger" data-toggle="tooltip" title="Eliminar" onclick="confirmDelete({{$geofence}})">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </form>
@@ -53,6 +55,15 @@
 @section('js')
     <script>
         $(document).ready(function() {
+
+            @if(session('success'))
+                Swal.fire({
+                    title: 'Mensaje',
+                    text: '{{ session('success') }}',
+                    icon: 'success'
+                });
+            @endif
+
             $('#geofencesTable').DataTable({
                 destroy : true,
             "language": {
@@ -60,5 +71,26 @@
             }
             });
         });
+
+        function confirmDelete(geofence) {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                html: 'Está por eliminar el la geocerca: <b>'+geofence.name+'</b> , Esta acción no se puede deshacer.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Sí, eliminarla',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Envía el formulario para eliminar el dispositivo
+                    document.getElementById('deleteForm-'+geofence.id).submit();
+                }
+            });
+
+
+        }
+
     </script>
 @stop

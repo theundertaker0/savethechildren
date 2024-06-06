@@ -13,6 +13,7 @@ class DeviceController extends Controller
     public function index()
     {
         $devicesHeads = [
+            'Id',
             'Nombre',
             'Descripción',
             ['label' => 'Acciones', 'no-export' => true, 'width' => 5],
@@ -42,7 +43,7 @@ class DeviceController extends Controller
         ]);
 
         Device::create($request->all());
-        return redirect()->route('devices.index');
+        return redirect()->route('devices.index')->with('success', 'El dispositivo ha sido agregado correctamente.');
     }
 
     /**
@@ -78,7 +79,7 @@ class DeviceController extends Controller
         $device = Device::find($id);
 
         $device->update($request->all());
-        return redirect()->route('devices.index');
+        return redirect()->route('devices.index')->with('success', 'El dispositivo ha sido actualizado correctamente.');
     }
 
     /**
@@ -88,6 +89,6 @@ class DeviceController extends Controller
     {
         $device = device::find($id);
         $device->delete();
-        return redirect()->route('devices.index');
+        return redirect()->route('devices.index')->with('success', 'El dispositivo ha sido eliminado correctamente.');
     }
 }

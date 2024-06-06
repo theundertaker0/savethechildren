@@ -2,7 +2,7 @@
 
 return [
 
-    'main_navigation' => 'MENU PRINCIPAL',
+    'main_navigation' => 'MENÚ PRINCIPAL',
     'blog' => 'Blog',
     'pages' => 'Páginas',
     'account_settings' => 'AJUSTES DE LA CUENTA',

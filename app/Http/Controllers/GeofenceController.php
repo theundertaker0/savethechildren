@@ -44,7 +44,7 @@ class GeofenceController extends Controller
         ]);
 
         Geofence::create($request->all());
-        return redirect()->route('geofences.index');
+        return redirect()->route('geofences.index')->with('success', 'La geocerca ha sido agregada correctamente.');
     }
 
     /**
@@ -80,7 +80,7 @@ class GeofenceController extends Controller
         ]);
         $geo = Geofence::find($id);
         $geo->update($request->all());
-        return redirect()->route('geofences.index');
+        return redirect()->route('geofences.index')->with('success', 'La geocerca ha sido actualizada correctamente.');
     }
 
     /**
@@ -90,6 +90,6 @@ class GeofenceController extends Controller
     {
         $geofence = Geofence::find($id);
         $geofence->delete();
-        return redirect()->route('geofences.index');
+        return redirect()->route('geofences.index')->with('success', 'La geocerca ha sido eliminada correctamente.');
     }
 }
