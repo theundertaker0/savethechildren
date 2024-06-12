@@ -1,7 +1,7 @@
 (function() {
-    
+
     "use strict";
-    
+
     //===== Prealoder
 
     window.onload = function() {
@@ -13,7 +13,7 @@
         document.querySelector('.preloader').style.display = 'none';
     }
 
-    
+
     /*=====================================
     Sticky
     ======================================= */
@@ -24,10 +24,10 @@
 
         if (window.pageYOffset > sticky) {
             header_navbar.classList.add("sticky");
-            logo.setAttribute("src", "assets/images/logo-2.svg")
+            logo.setAttribute("src", "/vendor/adminlte/dist/img/savethechildrenLogo128x128.png")
         } else {
             header_navbar.classList.remove("sticky");
-            logo.setAttribute("src", "assets/images/logo.svg")
+            logo.setAttribute("src", "/vendor/adminlte/dist/img/savethechildrenLogo128x128.png")
         }
 
 
@@ -44,9 +44,9 @@
     // Get the navbar
 
 
-    // for menu scroll 
+    // for menu scroll
     var pageLink = document.querySelectorAll('.page-scroll');
-    
+
     pageLink.forEach(elem => {
         elem.addEventListener('click', e => {
             e.preventDefault();
@@ -80,7 +80,7 @@
 
 
     //===== close navbar-collapse when a  clicked
-    let navbarToggler = document.querySelector(".navbar-toggler");    
+    let navbarToggler = document.querySelector(".navbar-toggler");
     var navbarCollapse = document.querySelector(".navbar-collapse");
 
     navbarToggler.addEventListener('click', () => {
@@ -96,7 +96,7 @@
 
 
     //===== glide tiny for testimonial
-    
+
     tns({
         container: '.testimonial_active',
         items: 1,
@@ -149,8 +149,8 @@
     };
 
     document.querySelector('.back-to-top').onclick = function () {
-        scrollTo(document.documentElement); 
+        scrollTo(document.documentElement);
     }
 
-    
+
 })();

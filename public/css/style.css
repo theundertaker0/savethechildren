@@ -17,7 +17,7 @@
 
 -----------------------------------------------------------------------------------*/
 /*===========================
-    01.COMMON css 
+    01.COMMON css
 ===========================*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
 html {
@@ -330,7 +330,7 @@ p {
 }
 
 /*===========================
-     02.HEADER css 
+     02.HEADER css
 ===========================*/
 /*===== NAVBAR =====*/
 .header_navbar {
@@ -366,12 +366,12 @@ p {
 }
 
 .navbar-brand img {
-  width: 150px;
+  width: 96px;
 }
 
 @media (max-width: 767px) {
   .navbar-brand img {
-    width: 130px;
+    width: 96px;
   }
 }
 
@@ -745,7 +745,7 @@ p {
 }
 
 /*===========================
-      03.FEATURES css 
+      03.FEATURES css
 ===========================*/
 .single_features i {
   font-size: 60px;
@@ -784,7 +784,7 @@ p {
 }
 
 /*===========================
-      04.ABOUT css 
+      04.ABOUT css
 ===========================*/
 .about_area {
   background-color: #F9F9F9;
@@ -905,7 +905,7 @@ p {
 }
 
 /*===========================
-      05.PORTFOLIO css 
+      05.PORTFOLIO css
 ===========================*/
 .single_portfolio {
   position: relative;
@@ -1026,7 +1026,7 @@ p {
 }
 
 /*===========================
-      06.PRICING css 
+      06.PRICING css
 ===========================*/
 .pricing_area {
   background-color: #F9F9F9;
@@ -1110,7 +1110,7 @@ p {
 }
 
 /*===========================
-        07.TEAM css 
+        07.TEAM css
 ===========================*/
 .single_team {
   position: relative;
@@ -1167,7 +1167,7 @@ p {
 }
 
 /*===========================
-     08.TESTIMONIAL css 
+     08.TESTIMONIAL css
 ===========================*/
 .testimonial_area {
   position: relative;
@@ -1242,7 +1242,7 @@ p {
 }
 
 /*===========================
-    09.BLOG css 
+    09.BLOG css
 ===========================*/
 .single_blog .blog_image img {
   width: 100%;
@@ -1313,7 +1313,7 @@ p {
 }
 
 /*===========================
-    10.CONTACT css 
+    10.CONTACT css
 ===========================*/
 .contact_area {
   position: relative;
@@ -1373,7 +1373,7 @@ p.form-message.success.form-message.error, p.form-message.error.form-message.err
 }
 
 /*===========================
-    11.FOOTER css 
+    11.FOOTER css
 ===========================*/
 .footer_area {
   background-color: #E84E4E;

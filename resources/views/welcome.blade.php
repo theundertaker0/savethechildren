@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/ico">
 
     <!--====== Animate CSS ======-->
     <link rel="stylesheet" href="{{asset('/css/animate.css')}}">
@@ -68,7 +68,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="{{ url('/') }}">
-                                <img id="logo" src="/vendor/adminlte/dist/img/savethechildrenLogo128x128.png" alt="Logo">
+                                <img id="logo" src="{{ asset('vendor/adminlte/dist/img/savethechildrenLogo128x128.png') }}" alt="Logo">
                             </a>
                             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
@@ -183,7 +183,7 @@
             </div> <!-- container -->
 
             <div class="about_image bg_cover wow fadeInLeft" data-wow-duration="1.3s" data-wow-delay="0.2s"
-                style="background-image: url(assets/images/about.jpg)">
+                style="background-image: url({{asset('/images/about.jpg')}})">
                 <div class="image_content">
                     <h4 class="experience"><span>5+</span> Años de experiencia</h4>
                 </div>
