@@ -93,7 +93,38 @@
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#contact">Contáctanos</a>
                                     </li>
+                                    @auth
+                                    <li class="nav-item">
+                                        <a
+                                            href="{{ url('/dashboard') }}"
+                                            class=""
+                                        >
+                                            Dashboard
+                                        </a>
+
+                                    </li>
+
+                                    @else
+                                    <li class="nav-item">
+                                        <a
+                                            href="{{ route('login') }}"
+                                        >
+                                            Ingresar
+                                        </a>
+                                    </li>
+                                        @if (Route::has('register'))
+                                            <li class="nav-item">
+                                                <a
+                                                    href="{{ route('register') }}"
+                                                >
+                                                    Registrarse
+                                                </a>
+                                            </li>
+
+                                        @endif
+                                    @endauth
                                 </ul>
+
                             </div> <!-- navbar collapse -->
                         </nav> <!-- navbar -->
                     </div>
