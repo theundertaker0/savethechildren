@@ -137,24 +137,24 @@
                     <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
                         data-wow-delay="0.2s">
                         <i class="lni lni-layers"></i>
-                        <h4 class="features_title">Bootstrap 5 Based</a></h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
+                        <h4 class="features_title">Actualización Constante</a></h4>
+                        <p>Siempre estamos innovando y añadiendo nuevas funcionalidades a nuestro sistema, así como mejorando las existentes.</p>
                     </div> <!-- single features -->
                 </div>
                 <div class="col-lg-4 col-md-7">
                     <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
                         data-wow-delay="0.4s">
-                        <i class="lni lni-layout"></i>
-                        <h4 class="features_title">Clean Design</a></h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
+                        <i class="lni lni-cloud-network"></i>
+                        <h4 class="features_title">Vanguardia Tecnológica</a></h4>
+                        <p>Nos actualizamos en cuestiones tecnológicas todos los días para garantizar que utilizamos lo último en el mercado y así poder incprporar nuevas y mejores funcionalidades.</p>
                     </div> <!-- single features -->
                 </div>
                 <div class="col-lg-4 col-md-7">
                     <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
                         data-wow-delay="0.6s">
-                        <i class="lni lni-bolt"></i>
-                        <h4 class="features_title">Cutting-edge Features</a></h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
+                        <i class="lni lni-medall"></i>
+                        <h4 class="features_title">Garantia de Satisfacción</a></h4>
+                        <p>Nos preocupamos día a día en mejorar nuestros servicios y atención para que siempre tengas la mejor experiencia, también te escuchamos para incorporar los cambios que realmente necesitas.</p>
                     </div> <!-- single features -->
                 </div>
             </div> <!-- row -->
@@ -172,19 +172,11 @@
                     <div class="col-lg-6">
                         <div class="about_content pt-120 pb-130">
                             <div class="section_title pb">
-                                <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">About Our
-                                    Creative Proccess</h4>
-                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor
-                                    sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut
-                                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                                    dolores et erebum</p>
-                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.6s">Lorem ipsum dolor
-                                    sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                                    ut labore etdolore maali quyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                                    dolores</p>
+                                <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Nosotros</h4>
+                                <br>
+                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Somos una empresa joven, comprometida con la excelencia en el servicio que brindamos a nuestros clientes y responsables de la calidad y seguridad del mismo.</p>
+                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.6s">Utilizamos lo último en tecnología y constantemente estamos evolucionando e implementando nuevas características para brindarte un mejor servicio y garantizar tu tranquilidad.</p>
                             </div> <!-- section title -->
-                            <a href="#0" class="main-btn wow fadeInUp" data-wow-duration="1.3s"
-                                data-wow-delay="0.7s">Learn More</a>
                         </div> <!-- about content -->
                     </div>
                 </div> <!-- row -->
@@ -193,7 +185,7 @@
             <div class="about_image bg_cover wow fadeInLeft" data-wow-duration="1.3s" data-wow-delay="0.2s"
                 style="background-image: url(assets/images/about.jpg)">
                 <div class="image_content">
-                    <h4 class="experience"><span>5</span> Years of Experience</h4>
+                    <h4 class="experience"><span>5+</span> Años de experiencia</h4>
                 </div>
             </div> <!-- about image -->
         </div>
@@ -208,9 +200,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-25">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Our Services</h4>
-                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor sit
-                            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.</p>
+                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Nuestros servicios</h4>
+                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Estas son algunas de las características del servicio que tenemos implementadas actualmente.</p>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -218,49 +209,25 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
                         data-wow-delay="0.2s">
-                        <i class="lni lni-briefcase"></i>
-                        <h4 class="features_title">Digital Business</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
+                        <i class="lni lni-graph"></i>
+                        <h4 class="features_title">Geocercas</h4>
+                        <p>Podrás crear geocercas en ubicaciones donde quieres alertas en caso de que el dispositivo ingrese a ella.</p>
                     </div> <!-- single features -->
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
                         data-wow-delay="0.3s">
-                        <i class="lni lni-clipboard"></i>
-                        <h4 class="features_title">Startup Business</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
+                        <i class="lni lni-road"></i>
+                        <h4 class="features_title">Seguimiento de Rutas</h4>
+                        <p>Puedes visualizar la ruta seguida por un dispostivo en un periodo de tiempo que eligas.</p>
                     </div> <!-- single features -->
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
                         data-wow-delay="0.4s">
-                        <i class="lni lni-target-revenue"></i>
-                        <h4 class="features_title">Business Investment</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <i class="lni lni-invention"></i>
-                        <h4 class="features_title">Business Solutions2</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.3s">
-                        <i class="lni lni-bar-chart"></i>
-                        <h4 class="features_title">Business Analysis</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.4s">
-                        <i class="lni lni-calendar"></i>
-                        <h4 class="features_title">Consulting Business</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
+                        <i class="lni lni-map"></i>
+                        <h4 class="features_title">Ubicación en Tiempo Real</h4>
+                        <p>Puedes obtener la localización actual del dispositivo en cualquier momento.</p>
                     </div> <!-- single features -->
                 </div>
             </div> <!-- row -->
